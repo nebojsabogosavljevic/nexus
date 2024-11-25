@@ -30,7 +30,7 @@ vehiclesStore.fetchYears()
   <div class="container">
     <h1 class="title">{{ $t('select') }} {{ $t('vehicle') }}</h1>
     <Dropdown
-      :label="$t('year')"
+      :label="$t('year2')"
       :options="vehiclesStore.years"
       v-model="selectedYear"
     />
@@ -59,6 +59,6 @@ vehiclesStore.fetchYears()
   background-color: #f4f7fb;
   width: 50%;
   height: 400px;
-  padding: 10px;
+  padding: 10px 20px;
 }
 </style>
