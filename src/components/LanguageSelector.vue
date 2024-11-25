@@ -28,6 +28,8 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { useLanguageStore } from '@/stores/languageStore'
+import usFlag from '@/assets/flags/us.svg'
+import srFlag from '@/assets/flags/sr.svg'
 
 const languageStore = useLanguageStore()
 
@@ -38,12 +40,12 @@ const options = [
   {
     code: 'en',
     name: 'English (US)',
-    flag: './src/assets/flags/us.svg',
+    flag: usFlag,
   },
   {
     code: 'sr',
     name: 'Serbian (SR)',
-    flag: './src/assets/flags/sr.svg',
+    flag: srFlag,
   },
 ]
 
