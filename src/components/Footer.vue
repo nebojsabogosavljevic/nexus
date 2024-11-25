@@ -1,7 +1,7 @@
 <template>
   <div class="footer">
     <p class="footer-text">
-      {{$t('createdBy')}}: <strong>Nebojša Bogosavljević</strong> - FullStack (MEVN) Developer
+      {{ $t('createdBy') }}: <strong>Nebojša Bogosavljević</strong> - FullStack (MEVN) Developer
     </p>
     <p class="footer-text">
       <a
@@ -13,8 +13,8 @@
         Contact
       </a>
       <span v-if="tooltipVisible" class="tooltip">
-        {{$t('email')}}: nebojsa.bogosvljevic3@gmail.com <br />
-        {{$t('phone')}}: +381 69 20 32 132
+        {{ $t('email') }}: nebojsa.bogosvljevic3@gmail.com <br />
+        {{ $t('phone') }}: +381 69 20 32 132
       </span>
     </p>
     <div class="social-icons">
@@ -25,10 +25,7 @@
         aria-label="LinkedIn Profile"
         class="social-icon"
       >
-        <img
-          src="@/assets/icons/linkedin.svg"
-          alt="LinkedIn"
-        />
+        <img src="@/assets/icons/linkedin.svg" alt="LinkedIn" />
       </a>
       <a
         href="https://github.com/nebojsabogosavljevic/nexus"
@@ -37,26 +34,23 @@
         aria-label="GitHub Profile"
         class="social-icon"
       >
-        <img
-          src="@/assets/icons/github.svg"
-          alt="GitHub"
-        />
+        <img src="@/assets/icons/github.svg" alt="GitHub" />
       </a>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref } from 'vue'
 
-const tooltipVisible = ref(false);
+const tooltipVisible = ref(false)
 
 function showTooltip() {
-  tooltipVisible.value = true;
+  tooltipVisible.value = true
 }
 
 function hideTooltip() {
-  tooltipVisible.value = false;
+  tooltipVisible.value = false
 }
 </script>
 
@@ -125,7 +119,9 @@ function hideTooltip() {
 .social-icon img {
   width: 24px;
   height: 24px;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
 }
 
 .social-icon:hover img {

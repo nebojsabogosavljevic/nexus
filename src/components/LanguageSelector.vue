@@ -1,35 +1,21 @@
 <template>
   <div class="custom-language-selector">
     <div class="dropdown">
-      <div
-        class="dropdown-selected"
-        @click="toggleDropdown"
-      >
-        <img
-          :src="getFlag(selectedLanguage)"
-          alt="Selected Language Flag"
-          class="flag"
-        />
+      <div class="dropdown-selected" @click="toggleDropdown">
+        <img :src="getFlag(selectedLanguage)" alt="Selected Language Flag" class="flag" />
         <span class="language-name">
           {{ getLanguageName(selectedLanguage) }}
         </span>
         <span class="arrow">&#9662;</span>
       </div>
-      <ul
-        class="dropdown-menu"
-        v-if="dropdownOpen"
-      >
+      <ul class="dropdown-menu" v-if="dropdownOpen">
         <li
           v-for="option in options"
           :key="option.code"
           @click="selectLanguage(option.code)"
           class="dropdown-item"
         >
-          <img
-            :src="option.flag"
-            :alt="`${option.name} Flag`"
-            class="flag"
-          />
+          <img :src="option.flag" :alt="`${option.name} Flag`" class="flag" />
           <span class="language-name">
             {{ option.name }}
           </span>

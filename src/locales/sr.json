@@ -1,14 +1,14 @@
 {
-    "title": "Dobrodošli",
-    "greeting": "Zdravo",
-    "select": "Izaberite",
-    "vehicle": "Vozilo",
-    "assignment": "Zadatak",
-    "year": "Godina",
-    "year2": "Godinu",
-    "make": "Proizvođača",
-    "model": "Model",
-    "email": "E-pošta",
-    "phone": "Telefon",
-    "createdBy": "Napravio"
+  "title": "Dobrodošli",
+  "greeting": "Zdravo",
+  "select": "Izaberite",
+  "vehicle": "Vozilo",
+  "assignment": "Zadatak",
+  "year": "Godina",
+  "year2": "Godinu",
+  "make": "Proizvođača",
+  "model": "Model",
+  "email": "E-pošta",
+  "phone": "Telefon",
+  "createdBy": "Napravio"
 }

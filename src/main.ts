@@ -14,4 +14,3 @@ const languageStore = useLanguageStore()
 i18n.global.locale = languageStore.currentLanguage
 
 app.mount('#app')
-

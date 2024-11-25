@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import Container from './components/Container.vue';
-import Headline from './components/Headline.vue';
+import Container from './components/Container.vue'
+import Headline from './components/Headline.vue'
 import Footer from './components/Footer.vue'
 </script>
 
