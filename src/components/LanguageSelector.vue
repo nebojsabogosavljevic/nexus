@@ -36,7 +36,7 @@ const selectedLanguage = ref(languageStore.getCurrentLanguage)
 
 const options = [
   {
-    code: 'us',
+    code: 'en',
     name: 'English (US)',
     flag: './src/assets/flags/us.svg',
   },
@@ -52,9 +52,13 @@ function toggleDropdown() {
 }
 
 function selectLanguage(lang: string) {
-  selectedLanguage.value = lang
-  languageStore.setLanguage(lang)
-  dropdownOpen.value = false
+  if (lang === 'en' || lang === 'sr') {
+    selectedLanguage.value = lang
+    languageStore.setLanguage(lang)
+    dropdownOpen.value = false
+  } else {
+    console.error(`Invalid language assignment: ${lang}`);
+  }
 }
 
 function getFlag(lang: string) {
