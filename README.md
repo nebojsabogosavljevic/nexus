@@ -11,6 +11,7 @@ npm install
 ### Compile and Hot-Reload for Development
 
 ```sh
+Add .env file with VITE_API_BASE_URL variable
 npm run dev
 ```
 
