@@ -17,7 +17,7 @@ function handleChange(event: Event) {
   <div class="dropdown">
     <label class="dropdown-label">{{ label }}</label>
     <select class="dropdown-select" :value="modelValue" @change="handleChange">
-      <option value="" disabled>Select {{ label }}</option>
+      <option value="" disabled>{{$t('select')}} {{ label }}</option>
       <option v-for="option in options" :key="option" :value="option">{{ option }}</option>
     </select>
   </div>

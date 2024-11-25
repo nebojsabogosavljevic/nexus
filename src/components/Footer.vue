@@ -1,13 +1,21 @@
 <template>
   <div class="footer">
     <p class="footer-text">
-      Created by: <strong>Nebojša Bogosavljević</strong> - FullStack (MEVN) Developer
+      {{$t('createdBy')}}: <strong>Nebojša Bogosavljević</strong> - FullStack (MEVN) Developer
     </p>
     <p class="footer-text">
-      Task for Nexus Transport.
-    </p>
-    <p class="footer-text">
-      <a href="mailto:nebojsa.bogosvljevic@gmail.com" class="footer-link">Contact</a>
+      <a
+        href="mailto:nebojsa.bogosvljevic@gmail.com"
+        class="footer-link"
+        @mouseover="showTooltip"
+        @mouseleave="hideTooltip"
+      >
+        Contact
+      </a>
+      <span v-if="tooltipVisible" class="tooltip">
+        {{$t('email')}}: nebojsa.bogosvljevic3@gmail.com <br />
+        {{$t('phone')}}: +381 69 20 32 132
+      </span>
     </p>
     <div class="social-icons">
       <a
@@ -23,7 +31,7 @@
         />
       </a>
       <a
-        href="https://github.com/your-github-profile"
+        href="https://github.com/nebojsabogosavljevic/nexus"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="GitHub Profile"
@@ -39,7 +47,17 @@
 </template>
 
 <script setup lang="ts">
-// No specific logic is required for this static footer
+import { ref } from 'vue';
+
+const tooltipVisible = ref(false);
+
+function showTooltip() {
+  tooltipVisible.value = true;
+}
+
+function hideTooltip() {
+  tooltipVisible.value = false;
+}
 </script>
 
 <style scoped>
@@ -55,15 +73,46 @@
   margin: 5px 0;
   font-size: 14px;
   color: #333;
+  position: relative;
 }
 
 .footer-link {
   color: #007bff;
   text-decoration: none;
+  position: relative;
+  cursor: pointer;
 }
 
 .footer-link:hover {
   text-decoration: underline;
+}
+
+.tooltip {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  text-align: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  margin-bottom: 5px;
+}
+
+.tooltip::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 5px;
+  border-style: solid;
+  border-color: #333 transparent transparent transparent;
 }
 
 .social-icons {

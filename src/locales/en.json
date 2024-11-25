@@ -5,6 +5,10 @@
     "vehicle": "Vehicle",
     "assignment": "Assignment",
     "year": "Year",
+    "year2": "Year",
     "make": "Make",
-    "model": "Model"
+    "model": "Model",
+    "email": "Email",
+    "phone": "Phone",
+    "createdBy": "Created by"
 }

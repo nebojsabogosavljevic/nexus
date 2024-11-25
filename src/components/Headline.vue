@@ -40,6 +40,5 @@ defineProps<{
 
 .language-selector {
     margin-right: 20px;
-    /* width: 150px; */
 }
 </style>

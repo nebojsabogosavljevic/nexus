@@ -1,10 +1,14 @@
 {
     "title": "Dobrodošli",
     "greeting": "Zdravo",
-    "select": "Izaberi",
+    "select": "Izaberite",
     "vehicle": "Vozilo",
     "assignment": "Zadatak",
     "year": "Godina",
-    "make": "Proizvođač",
-    "model": "Model"
+    "year2": "Godinu",
+    "make": "Proizvođača",
+    "model": "Model",
+    "email": "E-pošta",
+    "phone": "Telefon",
+    "createdBy": "Napravio"
 }
